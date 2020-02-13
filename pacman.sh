@@ -13,6 +13,7 @@ pacman -Sy --needed \
 	dnsutils \
 	docker \
 	firefox \
+  git \
 	go \
 	i3lock \
 	i3status \

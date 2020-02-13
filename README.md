@@ -26,7 +26,7 @@ make install-aur-packages
 To configure the machine:
 
 ```
-make configure && sudo make configure0-sudo
+make configure && sudo make configure-sudo
 ```
 
 Window manager compilation/install:

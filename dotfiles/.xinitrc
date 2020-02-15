@@ -1,6 +1,6 @@
 exec xrdb ~/.Xresources &
 xset r rate 150 60 &
-exec compton &
+exec picom &
 eval $(ssh-agent) &
-exec feh --bg-scale ~/photos/wallpapers/phiphi.jpg &
+feh --bg-scale ~/photos/wallpapers/current.jpg &
 exec dwm

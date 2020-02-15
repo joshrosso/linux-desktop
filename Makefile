@@ -1,18 +1,20 @@
-update: mkdir -p \ 
-	dotfiles \ 
-	dotfiles/.ssh \ 
-	dotfiles/.config/nvim \ 
-	scripts \ 
+update: 
+
+	mkdir -p \
+	dotfiles \
+	dotfiles/.ssh \
+	dotfiles/.config/nvim \
+	scripts \
 	scripts/usr/local/bin 
 
-	cp -fr \ 
-	${HOME}/.bash_aliases \ 
-	${HOME}/.bash_profile \ 
-	${HOME}/.bashrc \ 
-	${HOME}/.gitconfig \ 
-	${HOME}/.tmux.conf \ 
-	${HOME}/.xinitrc \ 
-	${HOME}/.Xresources \ 
+	cp -fr \
+	${HOME}/.bash_aliases \
+	${HOME}/.bash_profile \
+	${HOME}/.bashrc \
+	${HOME}/.gitconfig \
+	${HOME}/.tmux.conf \
+	${HOME}/.xinitrc \
+	${HOME}/.Xresources \
 	./dotfiles 
 
 	cp -r ${HOME}/.ssh/config dotfiles/.ssh/

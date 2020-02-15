@@ -50,7 +50,9 @@ install-wm:
 	cd dwm && $(MAKE) install
 
 install-term:
-	cd st && $(MAKE) install
+	# clean is important to ensure ~/.terminfo
+	# is updated on system
+	cd st && $(MAKE) clean install
 
 install-packages:
 	./pacman.sh

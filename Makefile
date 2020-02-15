@@ -39,6 +39,7 @@ configure:
 
 	cp -r dotfiles/.ssh/config ${HOME}/.ssh/
 	cp -r dotfiles/.config/nvim/init.vim ${HOME}/.config/nvim/
+	cp -r scripts/usr/local/bin/bye /usr/local/bin/
 
 configure-sudo:
 	cp -r scripts/usr/local/bin/bye /usr/local/bin/

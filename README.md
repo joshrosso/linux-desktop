@@ -40,3 +40,20 @@ Terminal manager compilation/install:
 ```
 sudo make install-term
 ```
+
+### Runtime details
+
+This section contains notes about ensuring specific applications run well.
+
+## Zoom
+
+### Black screen during screen sharing
+
+When sharing screens against an X window system, a compositor is required or
+else your screen will go black while sharing.
+
+zoom support page:
+https://support.zoom.us/hc/en-us/articles/202082128-Black-Screen-During-Screen-Sharing 
+
+While zoom recommends xcompmgr, picom (previously compton) is a more modern
+solution. ref: https://www.reddit.com/r/linuxquestions/comments/89ibgy/compton_vs_xcompmgr

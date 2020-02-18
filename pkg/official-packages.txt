@@ -2,8 +2,8 @@ alsa-utils
 ansible
 arandr
 bash-completion
+blueman
 bluez
-picom
 bluez-utils
 chromium
 ctags
@@ -20,7 +20,9 @@ imagemagick
 intel-ucode
 jdk10-openjdk
 jq
+libvncserver
 mutt
+nemo
 neovim
 net-tools
 network-manager-applet
@@ -28,6 +30,8 @@ networkmanager
 openconnect
 openssh
 pavucontrol
+picom
+pulseaudio-bluetooth
 remmina
 ripgrep
 signal-desktop
@@ -40,7 +44,3 @@ xf86-video-intel
 xorg
 xorg-xinit
 yarn
-blueman
-libvncserver
-nemo
-pulseaudio-bluetooth

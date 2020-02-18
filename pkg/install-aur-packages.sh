@@ -1,9 +1,15 @@
-# must be non-root
-if [ ! -e ~/.vim/autoload/plug.vim ]; then
-  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+#!/bin/bash
+
+echo "installing vim-plug"
+ehco
+if [ ! -e ~/.local/share/nvim/site/autoload/plug.vim ]; then
+  curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+	    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
+echo
+echo "installing aur packages"
+echo
 TEMP_DIR=$(mktemp -d)
 cd $TEMP_DIR
 

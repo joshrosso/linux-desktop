@@ -48,6 +48,8 @@ configure-sudo:
 	cp -r scripts/usr/local/bin/bye /usr/local/bin/
 	cp -r scripts/usr/local/bin/importc /usr/local/bin/
 
+install-packages:
+	cd pkg && sudo ./install-official-packages.sh && ./install-aur-packages.sh
 
 install-wm:
 	cd dwm && $(MAKE) install
@@ -56,9 +58,3 @@ install-term:
 	# clean is important to ensure ~/.terminfo
 	# is updated on system
 	cd st && $(MAKE) clean install
-
-install-packages:
-	./pacman.sh
-
-install-aur-packages:
-	./aur.sh

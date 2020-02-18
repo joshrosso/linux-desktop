@@ -27,7 +27,7 @@ update:
 configure:
 	mkdir -p \
 	  ${HOME}/.ssh \
-	  ${HOME}/.config/nvim
+	  ${HOME}/.config/nvim \
 	  ${HOME}/.config/picom
 
 	cp -fr \

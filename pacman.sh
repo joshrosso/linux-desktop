@@ -37,7 +37,7 @@ pacman -Sy --needed \
 	ttf-hack \
 	ttf-inconsolata \
 	volumeicon \
-	xf86-video-intel
+	xf86-video-intel \
 	xorg \
 	xorg-xinit \
 	yarn \
@@ -63,4 +63,3 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 localectl set-locale LANG=en_US.UTF-8
 
-sudo cp -v usr/local/bin/importc /usr/local/bin/

@@ -16,6 +16,7 @@ update:
 	${HOME}/.tmux.conf \
 	${HOME}/.xinitrc \
 	${HOME}/.Xresources \
+	${HOME}/.vimrc \
 	./dotfiles 
 
 	cp -r ${HOME}/.ssh/config dotfiles/.ssh/
@@ -38,6 +39,7 @@ configure:
 		dotfiles/.tmux.conf \
 		dotfiles/.xinitrc \
 		dotfiles/.Xresources \
+		dotfiles/.vimrc \
 	  ${HOME}/
 
 	cp -r dotfiles/.ssh/config ${HOME}/.ssh/

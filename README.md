@@ -57,3 +57,12 @@ https://support.zoom.us/hc/en-us/articles/202082128-Black-Screen-During-Screen-S
 
 While zoom recommends xcompmgr, picom (previously compton) is a more modern
 solution. ref: https://www.reddit.com/r/linuxquestions/comments/89ibgy/compton_vs_xcompmgr
+
+## OBS
+
+### Linux-Browser Plugin
+
+For linux browser to work (often used to host a chat window) you need the
+dependencies that come along with
+[obs-linuxbrowser](https://aur.archlinux.org/packages/obs-linuxbrowser/).
+Otherwise a window may not show up.

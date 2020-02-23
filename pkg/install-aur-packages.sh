@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "installing vim-plug"
-ehco
+echo
 if [ ! -e ~/.local/share/nvim/site/autoload/plug.vim ]; then
   curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 	    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -32,11 +32,6 @@ fi
 if ! pacman -Qs kubectl > /dev/null; then 
 	git clone https://aur.archlinux.org/kubectl-bin.git
 	cd kubectl-bin && makepkg -si --noconfirm && cd $TEMP_DIR
-fi
-
-if ! pacman -Qs ttf-symbola > /dev/null; then 
-	git clone https://aur.archlinux.org/ttf-symbola.git
-	cd ttf-symbola && makepkg -si --noconfirm && cd $TEMP_DIR
 fi
 
 if ! pacman -Qs zoom > /dev/null; then 

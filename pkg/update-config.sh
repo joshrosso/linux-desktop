@@ -6,7 +6,7 @@
 	../scripts \
 	../scripts/usr/local/bin 
 
-	cp -fr \
+	cp -frv \
 	${HOME}/.bash_aliases \
 	${HOME}/.bash_profile \
 	${HOME}/.bashrc \
@@ -16,8 +16,8 @@
 	${HOME}/.Xresources \
 	../dotfiles/
 
-	cp -r ${HOME}/.ssh/config ../dotfiles/.ssh/
-	cp -r ${HOME}/.config/picom/picom.conf ../dotfiles/.config/picom/
-	cp -r /usr/local/bin/bye ../scripts/usr/local/bin/
-	cp -r /usr/local/bin/importc ../scripts/usr/local/bin/
-	cp -r ${HOME}/.config/nvim/init.vim ../dotfiles/.config/nvim/
+	cp -rv ${HOME}/.ssh/config ../dotfiles/.ssh/
+	cp -rv ${HOME}/.config/picom/picom.conf ../dotfiles/.config/picom/
+	cp -rv /usr/local/bin/bye ../scripts/usr/local/bin/
+	cp -rv /usr/local/bin/importc ../scripts/usr/local/bin/
+	cp -rv ${HOME}/.config/nvim/init.vim ../dotfiles/.config/nvim/

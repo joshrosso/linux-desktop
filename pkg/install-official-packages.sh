@@ -8,5 +8,6 @@ fi
 echo "=====> downloading official packages"
 echo
 # requires sudo
+# --noconfirm is used to select all packages from groups
 pacman -Sy --needed $(<official-packages.txt)
 

@@ -39,9 +39,16 @@ if ! pacman -Qs zoom > /dev/null; then
 	cd zoom && makepkg -si --noconfirm && cd $TEMP_DIR
 fi
 
+# needed for OBS-linux browser plugin
 if ! pacman -Qs obs-linuxbrowser > /dev/null; then 
 	git clone https://aur.archlinux.org/obs-linuxbrowser.git
 	cd obs-linuxbrowser && makepkg -si --noconfirm && cd $TEMP_DIR
+fi
+
+# needed for OBS-linux browser plugin
+if ! pacman -Qs cef-minimal > /dev/null; then 
+	git clone https://aur.archlinux.org/cef-minimal.git
+	cd cef-minimal && makepkg -si --noconfirm && cd $TEMP_DIR
 fi
 
 if ! pacman -Qs dropbox > /dev/null; then 

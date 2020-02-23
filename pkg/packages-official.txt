@@ -46,7 +46,7 @@ ttf-hack
 ttf-inconsolata
 volumeicon
 xf86-video-intel
-xfce
+xfce4
 xorg
 xorg-xinit
 yarn

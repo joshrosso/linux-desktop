@@ -1,14 +1,21 @@
-# must be non-root
-if [ ! -e ~/.vim/autoload/plug.vim ]; then
-  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+#!/bin/bash
+
+echo "installing vim-plug"
+ehco
+if [ ! -e ~/.local/share/nvim/site/autoload/plug.vim ]; then
+  curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+	    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
+echo
+echo "installing aur packages"
+echo
 TEMP_DIR=$(mktemp -d)
 cd $TEMP_DIR
 
 if ! pacman -Qs spotify > /dev/null; then 
 	git clone https://aur.archlinux.org/spotify.git
+	gpg --recv-keys 4773BD5E130D1D45
 	cd spotify && makepkg -si --noconfirm && cd $TEMP_DIR
 fi
 

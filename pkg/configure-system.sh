@@ -27,3 +27,8 @@ localectl set-locale LANG=en_US.UTF-8
 
 cp -r ../scripts/usr/local/bin/bye /usr/local/bin/
 cp -r ../scripts/usr/local/bin/importc /usr/local/bin/
+
+# make vconsole font larger
+VCONSOLE_FONT=FONT=ter-v32n.psf.gz
+touch /etc/vconsole.conf
+grep -qxF ${VCONSOLE_FONT} /etc/vconsole.conf || echo ${VCONSOLE_FONT} >> /etc/vconsole.conf

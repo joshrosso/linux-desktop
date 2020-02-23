@@ -40,6 +40,7 @@ pulseaudio-bluetooth
 remmina
 ripgrep
 signal-desktop
+terminus-font
 terraform
 the_silver_searcher
 ttf-hack

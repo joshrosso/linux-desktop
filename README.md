@@ -60,3 +60,23 @@ For linux browser to work (often used to host a chat window) you need the
 dependencies that come along with
 [obs-linuxbrowser](https://aur.archlinux.org/packages/obs-linuxbrowser/).
 Otherwise a window may not show up.
+
+## Making Grub Font Readable
+
+To set a custom font and size, create a grub-compatible font.
+
+```
+grub-mkfont -s 60 -o /boot/grubfont.pf2 /usr/share/fonts/TTF/Hack-Regular.ttf
+```
+
+Then add the following in `/etc/default/grub`.
+
+```
+GRUB_FONT="/boot/grubfont.pf2"
+```
+
+Regenerate the grub config.
+
+```
+grub-mkconfig -o /boot/grub/grub.cfg
+```

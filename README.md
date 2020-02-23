@@ -5,37 +5,31 @@ configuration for his daily driver.
 
 ## Commands
 
-To update this repo's contents run:
+To update this repo's contents based on the local system, run:
 
 ```
 make update
 ```
 
-Arch package install:
+Install all packages (via AUR & official repos):
 
 ```
-sudo make install-packages
-```
-
-AUR package install:
-
-```
-make install-aur-packages
+make install-packages
 ```
 
 To configure the machine:
 
 ```
-make configure && sudo make configure-sudo
+make configure
 ```
 
-Window manager compilation/install:
+dwm compilation/install:
 
 ```
 sudo make install-wm
 ```
 
-Terminal manager compilation/install:
+st compilation/install:
 
 ```
 sudo make install-term

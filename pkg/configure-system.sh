@@ -17,7 +17,13 @@ timedatectl set-ntp true
 echo "blacklist pcspkr" >> /etc/modprobe.d/blacklist
 mkinitcpio -p linux
 
+# map vim to nvim
+ln -sf /usr/bin/nvim /usr/bin/vim
+
 # need to redo grub-mkconfig so it includes ucode launch before initramfs
 grub-mkconfig -o /boot/grub/grub.cfg
 
 localectl set-locale LANG=en_US.UTF-8
+
+cp -r ../scripts/usr/local/bin/bye /usr/local/bin/
+cp -r ../scripts/usr/local/bin/importc /usr/local/bin/

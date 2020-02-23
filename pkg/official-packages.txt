@@ -27,6 +27,7 @@ neovim
 net-tools
 network-manager-applet
 networkmanager
+networkmanager-openconnect
 openconnect
 openssh
 pavucontrol

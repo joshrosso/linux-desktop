@@ -17,7 +17,8 @@ fi
 mkdir -p \
   ${HOME}/.ssh \
   ${HOME}/.config/nvim \
-  ${HOME}/.config/picom
+  ${HOME}/.config/picom \
+  ${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml
 
 cp -fr \
   ../dotfiles/.bash_aliases \
@@ -25,6 +26,7 @@ cp -fr \
   ../dotfiles/.bashrc \
   ../dotfiles/.gitconfig \
   ../dotfiles/.tmux.conf \
+  ../dotfiles/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml \
   ../dotfiles/.xinitrc \
   ../dotfiles/.Xresources \
   ${HOME}/

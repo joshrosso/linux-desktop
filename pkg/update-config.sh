@@ -4,7 +4,8 @@
 	../dotfiles/.config/nvim \
 	../dotfiles/.config/picom \
 	../scripts \
-	../scripts/usr/local/bin 
+	../scripts/usr/local/bin \
+  ../dotfiles/.config/xfce4/xfconf/xfce-perchannel-xml
 
 	cp -frv \
 	${HOME}/.bash_aliases \
@@ -12,6 +13,7 @@
 	${HOME}/.bashrc \
 	${HOME}/.gitconfig \
 	${HOME}/.tmux.conf \
+	${HOME}/.Xresources \
 	${HOME}/.xinitrc \
 	${HOME}/.Xresources \
 	../dotfiles/
@@ -21,3 +23,4 @@
 	cp -rv /usr/local/bin/bye ../scripts/usr/local/bin/
 	cp -rv /usr/local/bin/importc ../scripts/usr/local/bin/
 	cp -rv ${HOME}/.config/nvim/init.vim ../dotfiles/.config/nvim/
+	cp -rv ${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml ../dotfiles/.config/xfce4/xfconf/xfce-perchannel-xml/

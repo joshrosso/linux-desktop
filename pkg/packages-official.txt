@@ -46,6 +46,7 @@ the_silver_searcher
 ttf-hack
 ttf-inconsolata
 volumeicon
+xclip
 xf86-video-intel
 xfce4
 xorg

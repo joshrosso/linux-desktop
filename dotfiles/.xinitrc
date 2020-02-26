@@ -3,4 +3,5 @@ xset r rate 150 60 &
 exec picom &
 eval $(ssh-agent) &
 feh --bg-scale ~/photos/wallpapers/current.jpg &
+systemctl --user start xfce4-notifyd &
 exec startxfce4

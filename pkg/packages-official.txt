@@ -49,6 +49,7 @@ volumeicon
 xclip
 xf86-video-intel
 xfce4
+xfce4-notifyd
 xorg
 xorg-xinit
 yarn

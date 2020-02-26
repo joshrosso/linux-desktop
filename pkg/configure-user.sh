@@ -20,17 +20,17 @@ mkdir -p \
   ${HOME}/.config/picom \
   ${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml
 
-cp -fr \
+cp -fvr \
   ../dotfiles/.bash_aliases \
   ../dotfiles/.bash_profile \
   ../dotfiles/.bashrc \
   ../dotfiles/.gitconfig \
   ../dotfiles/.tmux.conf \
-  ../dotfiles/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml \
   ../dotfiles/.xinitrc \
   ../dotfiles/.Xresources \
   ${HOME}/
 
-cp -r ../dotfiles/.ssh/config ${HOME}/.ssh/
-cp -r ../dotfiles/.config/picom/picom.conf ${HOME}/.config/picom/
-cp -r ../dotfiles/.config/nvim/init.vim ${HOME}/.config/nvim/
+cp -vr ../dotfiles/.ssh/config ${HOME}/.ssh/
+cp -vr ../dotfiles/.config/picom/picom.conf ${HOME}/.config/picom/
+cp -vr ../dotfiles/.config/nvim/init.vim ${HOME}/.config/nvim/
+cp -vr ../dotfiles/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml ${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml/

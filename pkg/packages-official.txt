@@ -34,6 +34,7 @@ networkmanager-openconnect
 obs-studio
 openconnect
 openssh
+pasystray
 pavucontrol
 picom
 pulseaudio-bluetooth

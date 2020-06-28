@@ -1,0 +1,96 @@
+###########################
+# xbindkeys configuration #
+###########################
+#
+# Version: 0.1.3
+#
+# If you edit this, do not forget to uncomment any lines that you change.
+# The pound(#) symbol may be used anywhere for comments.
+#
+# A list of keys is in /usr/include/X11/keysym.h and in
+# /usr/include/X11/keysymdef.h 
+# The XK_ is not needed. 
+#
+# List of modifier (on my keyboard): 
+#   Control, Shift, Mod1 (Alt), Mod2 (NumLock), 
+#   Mod3 (CapsLock), Mod4, Mod5 (Scroll). 
+#
+# Another way to specifie a key is to use 'xev' and set the 
+# keycode with c:nnn or the modifier with m:nnn where nnn is 
+# the keycode or the state returned by xev 
+#
+# This file is created by xbindkey_config 
+# The structure is : 
+# # Remark 
+# "command" 
+# m:xxx + c:xxx 
+# Shift+... 
+
+
+
+
+#keystate_numlock = enable
+#keystate_scrolllock = enable
+#keystate_capslock = enable
+
+
+
+#demu
+"dmenu_run -fn Hack-16:normal -l 5"
+    m:0x40 + c:65
+    Mod4 + space 
+
+#browser
+"chromium"
+    m:0x40 + c:56
+    Mod4 + b 
+
+#nemo
+"nemo"
+    m:0x40 + c:133
+    Mod4 + Super_L 
+
+#sound
+"pavucontrol"
+    m:0x40 + c:39
+    Mod4 + s 
+
+#terminal
+"st"
+    m:0x40 + c:36
+    Mod4 + Return 
+
+#screenshot
+#"xfce4-screenshooter -r"
+    #m:0x41 + c:13
+    #Shift+Mod4 + 4 
+
+#resize-obs
+#"wmctrl -r :ACTIVE: -e 0,0,0,1520,1080"
+    #m:0x41 + c:10
+    #Shift+Mod4 + 1 
+
+#resize-zoom
+#"wmctrl -r :ACTIVE: -e 0,0,0,1920,1080"
+    #m:0x41 + c:11
+    #Shift+Mod4 + 2
+
+#todoist
+"chromium --app=https://todoist.com"
+   
+
+#focus chrome
+"wmctrl -a chromium"
+   
+
+#focus term
+"wmctrl -a tmux"
+   
+
+#calendar
+"chromium --app=https://outlook.office.com/calendar/view/day"
+    m:0x40 + c:29
+    Mod4 + y 
+
+#
+# End of xbindkeys configuration

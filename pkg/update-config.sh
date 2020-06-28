@@ -16,6 +16,7 @@
 	${HOME}/.Xresources \
 	${HOME}/.xinitrc \
 	${HOME}/.Xresources \
+	${HOME}/.xbindkeysrc \
 	../dotfiles/
 
 	cp -rv ${HOME}/.ssh/config ../dotfiles/.ssh/

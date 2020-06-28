@@ -28,6 +28,7 @@ cp -fvr \
   ../dotfiles/.tmux.conf \
   ../dotfiles/.xinitrc \
   ../dotfiles/.Xresources \
+  ../dotfiles/.xbindkeysrc \
   ${HOME}/
 
 cp -vr ../dotfiles/.ssh/config ${HOME}/.ssh/

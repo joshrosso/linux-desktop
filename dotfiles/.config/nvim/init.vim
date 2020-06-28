@@ -11,6 +11,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'majutsushi/tagbar' 
 Plug 'itchyny/lightline.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'gabrielelana/vim-markdown'
 Plug 'junegunn/fzf.vim'
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',

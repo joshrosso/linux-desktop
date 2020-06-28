@@ -3,7 +3,7 @@ PS1='\u @ \h (\e[38;5;198m\w\e[0m) [\e[38;5;148m$(git branch 2>/dev/null | grep 
 # Environment / Path
 export GOBIN=/home/josh/bin
 export GOPATH=/home/josh/f/d/go
-export PATH=$PATH:$GOBIN
+export PATH=$PATH:$GOBIN:/home/josh/.local/bin/statusbar
 
 # Load aliases
 if [ -f ~/.bash_aliases ]; then

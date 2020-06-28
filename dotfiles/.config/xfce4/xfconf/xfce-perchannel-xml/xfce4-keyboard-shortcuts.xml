@@ -24,27 +24,18 @@
       <property name="&lt;Primary&gt;Escape" type="string" value="xfdesktop --menu"/>
       <property name="XF86Display" type="string" value="xfce4-display-settings --minimal"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;l" type="string" value="xflock4"/>
-      <property name="&lt;Alt&gt;F3" type="string" value="xfce4-appfinder">
+      <property name="&lt;Alt&gt;F3" type="empty">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="string" value="xflock4"/>
-      <property name="&lt;Alt&gt;F2" type="string" value="xfce4-appfinder --collapsed">
+      <property name="&lt;Alt&gt;F2" type="empty">
         <property name="startup-notify" type="bool" value="true"/>
       </property>
-      <property name="&lt;Alt&gt;F1" type="string" value="xfce4-popup-applicationsmenu"/>
-      <property name="XF86Mail" type="string" value="exo-open --launch MailReader"/>
       <property name="Print" type="string" value="xfce4-screenshooter"/>
-      <property name="XF86WWW" type="string" value="exo-open --launch WebBrowser"/>
-      <property name="&lt;Primary&gt;&lt;Alt&gt;t" type="string" value="exo-open --launch TerminalEmulator"/>
       <property name="&lt;Super&gt;p" type="string" value="xfce4-display-settings --minimal"/>
       <property name="override" type="bool" value="true"/>
-      <property name="&lt;Super&gt;Return" type="string" value="st -e tmux"/>
-      <property name="&lt;Super&gt;b" type="string" value="firefox"/>
-      <property name="&lt;Super&gt;s" type="string" value="pavucontrol"/>
       <property name="&lt;Super&gt;l" type="string" value="i3lock -i /home/josh/photos/wallpapers/lockscreen.png"/>
       <property name="&lt;Super&gt;c" type="string" value="xfce4-screenshooter"/>
-      <property name="&lt;Super&gt;space" type="string" value="dmenu_run -fn Monospace-16:normal -l 5"/>
-      <property name="&lt;Super&gt;d" type="string" value="nemo"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

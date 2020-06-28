@@ -38,10 +38,10 @@
 #define S_green         #859900
 
 *background:            S_base04
-URxvt*background:       [90]S_base04
+URxvt*background:       S_base04
 *foreground:            S_base00
 *depth:                 32
-*fading:                25
+!!*fading:                25
 !!*fadeColor:             S_base03
 *cursorColor:           S_base1
 *pointerColorBackground:S_base01
@@ -92,8 +92,9 @@ Xft.hinting:    1
 Xft.antialias:  1
 
 ! -- Fonts -- !
-URxvt.font:xft:Hack:pixelsize=16,xft:Noto Sans Symbols:pixelsize=16:style=Regular
-URxvt.boldFont:xft:Hack:style=Bold:pixelsize=16,xft:Noto Sans Symbols:pixelsize=16:style=Regular
+URxvt.font:xft:Hack:pixelsize=26,xft:Symbola:pixelsize=16:style=Regular
+URxvt.boldFont:xft:Hack:style=Bold:pixelsize=26,xft:Symbola:pixelsize=16:style=Regular
+*.alpha: 0.8
 
 *faceSize:              10
 *bellIsUrgent:          true

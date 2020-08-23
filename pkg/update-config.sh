@@ -6,6 +6,7 @@
 	../dotfiles/.config/fontconfig \
 	../scripts \
 	../scripts/usr/local/bin \
+	../s \
   ../dotfiles/.config/xfce4/xfconf/xfce-perchannel-xml
 
 	cp -frv \
@@ -27,3 +28,4 @@
 	cp -rv ${HOME}/.config/nvim/init.vim ../dotfiles/.config/nvim/
 	cp -rv ${HOME}/.config/fontconfig/fonts.conf ../dotfiles/.config/fontconfig/
 	cp -rv ${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml ../dotfiles/.config/xfce4/xfconf/xfce-perchannel-xml/
+	cp -rv ${HOME}/s/* ../s/

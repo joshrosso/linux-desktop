@@ -15,6 +15,7 @@ if [ ! -e ~/.local/share/nvim/site/autoload/plug.vim ]; then
 fi
 
 mkdir -p \
+  ${HOME}/s \
   ${HOME}/.ssh \
   ${HOME}/.config/nvim \
   ${HOME}/.config/picom \
@@ -35,6 +36,7 @@ cp -vr ../dotfiles/.ssh/config ${HOME}/.ssh/
 cp -vr ../dotfiles/.config/picom/picom.conf ${HOME}/.config/picom/
 cp -vr ../dotfiles/.config/nvim/init.vim ${HOME}/.config/nvim/
 cp -vr ../dotfiles/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml ${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml/
+cp -vr ../s/* ${HOME}/s/
 
 # update xfce settings
 killall xfconfd

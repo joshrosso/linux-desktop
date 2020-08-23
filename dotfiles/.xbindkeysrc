@@ -75,22 +75,14 @@
     #m:0x41 + c:11
     #Shift+Mod4 + 2
 
-#todoist
-"chromium --app=https://todoist.com"
-   
-
-#focus chrome
-"wmctrl -a chromium"
-   
-
-#focus term
-"wmctrl -a tmux"
-   
-
 #calendar
-"chromium --app=https://outlook.office.com/calendar/view/day"
+"~/s/launch_cal"
     m:0x40 + c:29
     Mod4 + y 
 
+# launch notion.so notes app
+"~/s/launch_notion"
+    m:0x40 + c:57
+    Mod4 + n
 #
 # End of xbindkeys configuration

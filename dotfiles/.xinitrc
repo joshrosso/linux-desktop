@@ -1,7 +1,8 @@
 exec xrdb ~/.Xresources &
 xset r rate 150 60 &
-exec picom &
+# only required when wm does not have compositor
+# exec picom &
 eval $(ssh-agent) &
 feh --bg-scale ~/photos/wallpapers/current.jpg &
 xbindkeys &
-exec dwm
+exec startxfce4

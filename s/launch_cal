@@ -14,13 +14,13 @@ fi
 WEB_ADDRESS='https://outlook.office.com/calendar/view/day'
 # find pid for app process
 # -f includes the entire process details, including arguments and flags
-NOTION_PID=$(pgrep -f "\-\-app=${WEB_ADDRESS}")
+APP_PID=$(pgrep -f "\-\-app=${WEB_ADDRESS}")
 # find pid existing chromium --app process
 CHROMIUM_PID=$(pgrep -f 'chromium --app')
 
 # if app is not running, start it
 # if app is running, focus it
-if [ -z "$NOTION_PID" ]
+if [ -z "$APP_PID" ]
 then
   # when app is not running, but another chromium --app is, kill the chromium pid
   # this is a result of chromium's process architecture where opening another --app puts it under the same pid
@@ -31,7 +31,7 @@ then
   chromium "--app=${WEB_ADDRESS}"
 else
   # using the pid, find the window id, then focus it
-  wid=$(wmctrl -lp | grep "$NOTION_PID" | awk '{print $1}')
+  wid=$(wmctrl -lp | grep "$APP_PID" | awk '{print $1}')
   # -R moves the window to the current desktop AND brings it to focus
   wmctrl -iR "$wid"
 fi

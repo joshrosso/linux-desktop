@@ -7,6 +7,11 @@
 [user]
 	email = joshrosso@gmail.com
 	name = joshrosso
+	signingkey = D5CD572310881E88
 
 [code]
 	editor = vim
+[core]
+	excludesfile = /home/josh/.gitignore_global
+[commit]
+	gpgsign = true

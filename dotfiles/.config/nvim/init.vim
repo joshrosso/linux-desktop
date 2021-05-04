@@ -120,3 +120,8 @@ nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+
+" disable language features of go-vim
+let g:go_def_mapping_enabled = 0 	" disable `gd`. coc.nvim maps `gd`.
+let g:go_doc_keywordprg_enabled = 0 " disable `K`. coc.nvim provides `K`. 
+let g:go_gopls_enabled = 0 		" disable `gopls`. coc.nvim initializes `gopls` server.

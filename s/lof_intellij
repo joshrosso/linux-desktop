@@ -4,8 +4,8 @@
 # if it is not, launch it
 # if it is, focus it
 
-APP_NAME="intellij-idea-ultimate-edition"
-PROCESS_PATH="/opt/intellij-idea-ultimate-edition/jbr/bin/java"
+APP_NAME="goland"
+PROCESS_PATH="/opt/goland/jbr/bin/java"
 
 # find pid for app process
 # -f includes the entire process details, including arguments and flags

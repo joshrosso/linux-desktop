@@ -1,4 +1,9 @@
-# launch demu
+# launch blueman-manager
+#"lof /usr/bin/python\ /usr/bin/blueman-manager"
+    #m:0x40 + c:26
+    #Mod4 + e
+
+## launch demu
 "dmenu_run -fn Hack-16:normal -l 5"
     m:0x40 + c:65
     Mod4 + space 
@@ -48,3 +53,8 @@
 "lof /opt/notion/notion"
     m:0x40 + c:57
     Mod4 + n
+
+# launch or focus slack
+"lof /usr/lib/slack/slack"
+    m:0x40 + c:30
+    Mod4 + u

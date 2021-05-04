@@ -8,10 +8,5 @@ alias l='ls -l'
 alias ll='ls -la'
 alias xclipc='xclip -selection c'
 alias xclipp='xclip -o'
-
-wcommit() {
-  git commit 
-  echo
-  echo COMMITED AS rossoj@vmware.com
-  echo
-}
+alias k='kubectl'
+complete -F __start_kubectl k

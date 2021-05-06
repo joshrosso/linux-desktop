@@ -9,7 +9,6 @@ install-packages:
 
 install-wm:
 	cd dwm && $(MAKE) install
-	cd dwmblocks && $(MAKE) install
 
 install-term:
 	# clean is important to ensure ~/.terminfo

@@ -6,14 +6,26 @@
 " -------------------------------------------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
 
+
+" assuming you're using vim-plug: https://github.com/junegunn/vim-plug
+Plug 'roxma/nvim-yarp'
+" comment/uncomment code
 Plug 'scrooloose/nerdcommenter'
+" git integration
+Plug 'tpope/vim-fugitive'
+" builds on fugitive to work with github
+Plug 'tpope/vim-rhubarb'
+" file browser
 Plug 'scrooloose/nerdtree'
-Plug 'NLKNguyen/papercolor-theme'
+" vim color theme
+Plug 'morhetz/gruvbox'
+" tag browser
 Plug 'majutsushi/tagbar' 
+" status bar at the bottom of vim
 Plug 'itchyny/lightline.vim'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'gabrielelana/vim-markdown'
+" fuzzy search with several integrations
 Plug 'junegunn/fzf.vim'
+" LSP client, providing language features
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
@@ -31,12 +43,14 @@ augroup FastEscape
    "au InsertLeave * set timeoutlen=1000
 augroup END
 
+" IMPORTANT: :help Ncm2PopupOpen for more information
+set completeopt=noinsert,menuone,noselect
 " -------------------------------------------------------------------------------------------------
 " colors
 " -------------------------------------------------------------------------------------------------
 set t_Co=256 "required for urxvt
-set background=dark "dark or light
-colorscheme PaperColor
+"set background=dark "dark or light
+colorscheme gruvbox
 
 hi Normal guibg=NONE ctermbg=NONE
 highlight clear LineNr
@@ -48,8 +62,9 @@ source /usr/share/vim/vimfiles/plugin/fzf.vim
 " -------------------------------------------------------------------------------------------------
 filetype on "detect files based on type
 filetype plugin on "when a file is edited its plugin file is loaded (if there is one for the 
-                  ""detected filetype) 
+                   "detected filetype) 
 filetype indent on "maintain indentation
+syntax on
 
 set incsearch "persist search highlight
 set hlsearch "highlight as search matches
@@ -72,11 +87,12 @@ let g:ackprg = 'ag --vimgrep' "use ag instead of ack
 " mapping
 " -------------------------------------------------------------------------------------------------
 let mapleader = "," "leader key is ','
+
+" fzf
+noremap <Leader>f :Rg!<cr>
 " nerd tree
 noremap <Leader>n :NERDTreeToggle<cr>
-noremap <Leader>f :NERDTreeFind<cr>
 "! ensures first result is not auto opened
-nnoremap <Leader>a :Ack!<Space>
 nnoremap <Leader>t :Tagbar<cr>
 " toggle show invisibles
 nnoremap <leader>l :set list!<CR>
@@ -84,6 +100,9 @@ nnoremap <leader>l :set list!<CR>
 inoremap <C-@> <c-x><c-o>
 nnoremap <Leader>m :set spell!<cr>
 
+" for markdown files:
+" auto wrap at 80 characters
+" enable spell check
 au BufRead,BufNewFile *.md setlocal spell textwidth=80
 
 " if hidden is not set, TextEdit might fail.
@@ -108,7 +127,8 @@ set signcolumn=yes
 let g:LanguageClient_serverCommands = {
     \ 'go': ['~/bin/gopls'],
     \ 'c': ['/usr/bin/clangd'],
-    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ 'haskell': ['haskell-language-server-8.10.4'],
+    \ 'rust': ['/usr/bin/rustup', 'run', 'stable', 'rls'],
     \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
     \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
     \ 'python': ['/usr/local/bin/pyls'],
@@ -119,9 +139,6 @@ nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 " Or map each action separately
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> gi :call LanguageClient#textDocument_implementation()<CR>
+nnoremap <silent> gt :call LanguageClient#textDocument_typeDefinition()<CR>
 nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
-
-" disable language features of go-vim
-let g:go_def_mapping_enabled = 0 	" disable `gd`. coc.nvim maps `gd`.
-let g:go_doc_keywordprg_enabled = 0 " disable `K`. coc.nvim provides `K`. 
-let g:go_gopls_enabled = 0 		" disable `gopls`. coc.nvim initializes `gopls` server.

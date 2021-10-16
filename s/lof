@@ -33,7 +33,7 @@ then
   $APP_NAME
 else
   # using the pid, find the window id, then focus it
-  wid=$(wmctrl -lp | grep "$APP_PID" | awk '{print $1}')
+  wid=$(wmctrl -lp | awk "/$APP_PID/ {print $1}")
   # -R moves the window to the current desktop AND brings it to focus
   wmctrl -iR "$wid"
 fi

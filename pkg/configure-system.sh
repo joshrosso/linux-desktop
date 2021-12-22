@@ -18,10 +18,6 @@ timedatectl set-ntp true
 echo "blacklist pcspkr" >> /etc/modprobe.d/blacklist
 mkinitcpio -p linux
 
-# map vim to nvim
-ln -sf /usr/bin/nvim /usr/bin/vim
-
-
 localectl set-locale LANG=en_US.UTF-8
 
 cp -r ../scripts/usr/local/bin/bye /usr/local/bin/

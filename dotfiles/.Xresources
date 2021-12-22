@@ -1,7 +1,5 @@
-! Dracula Xresources palette
-! source: https://github.com/dracula/xresources
 *.foreground: #F8F8F2
-*.background: #282A36
+*.background: #121212
 *.color0:     #000000
 *.color8:     #4D4D4D
 *.color1:     #FF5555
@@ -26,7 +24,7 @@ Xcursor.size:           16
 *saveLines:             999999
 
 !-- Xft settings -- !
-!!Xft.dpi:        80
+!Xft.dpi:        130,
 Xft.rgba:       rgb
 Xft.autohint:   0
 Xft.lcdfilter:  lcddefault
@@ -34,59 +32,14 @@ Xft.hintstyle:  hintfull
 Xft.hinting:    1
 Xft.antialias:  1
 
-! -- Fonts -- !
-URxvt.font:xft:Hack:pixelsize=10,xft:Symbola:pixelsize=16:style=Regular
-URxvt.boldFont:xft:Hack:style=Bold:pixelsize=26,xft:Symbola:pixelsize=16:style=Regular
-!!*.alpha: 0.8
+!! fonts
+!! antialias and autohint is enabled to improve crispness
+!! if using a terminal like st, the libxft-bgra[0] package may be required
+!! [0]: https://aur.archlinux.org/packages/libxft-bgra
+*.font: Hack:pixelsize=24:antialias=true:autohint=true
 
 *faceSize:              10
 *bellIsUrgent:          true
 
-!! scroll
-!! do not scroll with output
-URxvt*scrollTtyOutput:      false
-!! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
-URxvt*scrollWithBuffer:     true
-!! scroll back to the bottom on keypress
-URxvt*scrollTtyKeypress:    true
-
-!! scrollback buffer
-URxvt.secondaryScreen:  1
-URxvt.secondaryScroll:  0
-URxvt.secondaryWheel:   1
-
 !! scrollbar
 *scrollBar:             false
-
-URxvt*termName:         rxvt
-
-!! clickable urls
-URxvt.perl-ext-common:      default,matcher,selection-to-clipboard,clipboard,font-size
-URxvt.url-launcher:         /usr/bin/xdg-open
-URxvt.matcher.button:       1
-URxvt.url-select.underline: true
-
-!! copy paste
-URxvt*clipboard.copycmd:    xclip -i -selection clipboard
-URxvt*clipboard.pastecmd:   xclip -o -selection clipboard
-
-!! disable default bindings for Control-Shift
-URxvt.iso14755: false
-URxvt.iso14755_52: false
-
-!! Control-Shift-C for copy
-URxvt.keysym.C-C: perl:clipboard:copy
-URxvt.keysym.C-V: perl:clipboard:paste
-
-URxvt.keysym.C-Up:     font-size:increase
-URxvt.keysym.C-Down:   font-size:decrease
-URxvt.keysym.C-S-Up:   font-size:incglobal
-URxvt.keysym.C-S-Down: font-size:decglobal
-URxvt.keysym.C-equal:  font-size:reset
-URxvt.keysym.C-slash:  font-size:show
-
-!! get option over to work
-URxvt.keysym.M-Left:        \033[1;5D
-URxvt.keysym.M-Right:       \033[1;5C
-URxvt.keysym.Control-Left:  \033[1;5D
-URxvt.keysym.Control-Right: \033[1;5C

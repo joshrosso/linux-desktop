@@ -20,8 +20,6 @@ go
 i3lock
 i3status
 imagemagick
-intel-ucode
-jdk10-openjdk
 jq
 libvncserver
 mutt
@@ -49,7 +47,6 @@ ttf-inconsolata
 volumeicon
 xbindkeys
 xclip
-xf86-video-intel
 xfce4
 xfce4-notifyd
 xorg

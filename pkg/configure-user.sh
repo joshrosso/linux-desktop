@@ -5,19 +5,16 @@ if [ "$EUID" -eq 0 ]
         exit
 fi
 
-ln -sf ${HOME}/.config/nvim/init ${HOME}/.vimrc
-
 echo "installing vim-plug"
 echo
-if [ ! -e ~/.local/share/nvim/site/autoload/plug.vim ]; then
-  curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-	    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if [ ! -e ${HOME}/.vim/autoload/plug.vim ]; then
+  curl -fLo ${HOME}/.vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
 mkdir -p \
   ${HOME}/s \
   ${HOME}/.ssh \
-  ${HOME}/.config/nvim \
   ${HOME}/.config/picom \
   ${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml
 
@@ -34,7 +31,6 @@ cp -fvr \
 
 cp -vr ../dotfiles/.ssh/config ${HOME}/.ssh/
 cp -vr ../dotfiles/.config/picom/picom.conf ${HOME}/.config/picom/
-cp -vr ../dotfiles/.config/nvim/init.vim ${HOME}/.config/nvim/
 cp -vr ../dotfiles/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml ${HOME}/.config/xfce4/xfconf/xfce-perchannel-xml/
 cp -vr ../s/* ${HOME}/s/
 

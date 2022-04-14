@@ -8,8 +8,12 @@
     m:0x40 + c:65
     Mod4 + space 
 
+"import -window \"$(xdotool getwindowfocus -f)\" png:- | xclip -selection clipboard -t image/png"
+    m:0x40 + c:12
+    Mod4 + 3
+
 # launch browser
-"lof /usr/lib/firefox/firefox"
+"lof_chromium"
     m:0x40 + c:45
     Mod4 + k
 
@@ -19,12 +23,12 @@
     Mod4 + j
 
 # launch or focus editor
-"lof_intellij"
-    m:0x40 + c:43
-    Mod4 + h
+"lof gimp"    
+    m:0x40 + c:42
+    Mod4 + g
 
 # launch or focus nemo
-"lof nemo"
+"lof thunar"
     m:0x40 + c:40
     Mod4 + d
 
@@ -43,16 +47,6 @@
 "wmctrl -r :ACTIVE: -e 0,0,0,1920,1080"
     m:0x41 + c:11
     Shift+Mod4 + 2
-
-# launch or focus outlook
-"lof /opt/outlook/outlook"
-    m:0x40 + c:29
-    Mod4 + y 
-
-# launch or focus notion
-"lof /opt/notion/notion"
-    m:0x40 + c:57
-    Mod4 + n
 
 # launch or focus slack
 "lof /usr/lib/slack/slack"

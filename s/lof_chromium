@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# check for intellij running
+# if it is not, launch it
+# if it is, focus it
+
+APP_NAME="/usr/lib/chromium/chromium --force-device-scale-factor=1.3"
+PROCESS_PATH="/usr/lib/chromium/chromium --force-device-scale-factor=1.3 --enable-crashpad"
+
+# find pid for app process
+# -f includes the entire process details, including arguments and flags
+APP_PID="$(pgrep -f "${PROCESS_PATH}")"
+
+# if app is not running, start it
+# if app is running, focus it
+if [ -z "$APP_PID" ]
+then
+  # launch app
+  $APP_NAME
+else
+  # using the pid, find the window id, then focus it
+  wid=$(wmctrl -lp | grep "$APP_PID" | awk '{print $1}')
+  # -R moves the window to the current desktop AND brings it to focus
+  wmctrl -iR "$wid"
+fi

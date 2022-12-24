@@ -3,7 +3,7 @@
     #m:0x40 + c:26
     #Mod4 + e
 
-## launch demu
+## launch dmenu
 "dmenu_run -fn Hack-16:normal -l 5"
     m:0x40 + c:65
     Mod4 + space 
